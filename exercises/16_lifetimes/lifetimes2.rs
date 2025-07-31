@@ -12,8 +12,8 @@ fn main() {
 
     let string1 = String::from("long string is long");
     let result;
+    let string2 = String::from("xyz"); // longest 将输入中较短的生命周期作为返回引用的生命周期
     {
-        let string2 = String::from("xyz");
         result = longest(&string1, &string2);
     }
     println!("The longest string is '{result}'");
